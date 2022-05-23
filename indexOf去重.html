@@ -10,16 +10,10 @@
 
 <body>
     <script>
-        //双重for循环去重
-        let arr = [1, 2, 3, 2, 4, 3, 5, 6, 5, 3, 4]
+        let arr = [1, 2, 1, 2, 3, 4, 3, 5, 4, 5]
         let newArr = []
         for (var i = 0; i < arr.length; i++) {
-            for (var j = 0; j < newArr.length; j++) {
-                if (arr[i] === newArr[j]) {
-                    break;
-                }
-            }
-            if (j == newArr.length) {
+            if (newArr.indexOf(arr[i]) === -1) {
                 newArr.push(arr[i])
             }
         }
